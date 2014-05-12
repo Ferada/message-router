@@ -31,9 +31,9 @@ Whether you call it minion, daemon, or personal assistant:  Having a
 dedicated application manage the boring (read: repeating) parts of the
 users activities is beneficial to the overall happiness.
 
-In particular this means handling of typical PIM tasks,
-i.e. appointments, contacts and in general emails.  In general this
-means handling workflows, keeping track of events and state.
+In particular this means handling of typical PIM tasks, i.e.
+appointments, contacts and in general emails.  In general this means
+handling workflows, keeping track of events and state.
 
 Customizable applications are halfway there.  If users can customize the
 application to their liking, integrating different tools, they are some
@@ -70,8 +70,8 @@ Users should be able to select different services.
 My personal list would be:
 
 - Access to email facilities including address book, indexing and
-  subscribed mailing lists.
-- Calendar including appointments.
+  subscribed mailing lists (direct Maildir, mail server).
+- Calendar including appointments (CalDAV, CardDAV).
 - Status detection including geolocation and tracking of current
   projects.
 - Encryption and identity handling.  Depending on settings emails and

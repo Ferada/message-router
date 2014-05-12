@@ -29,3 +29,36 @@ expose functionality are advised:
 ## Network transparency
 
 If applicable multiple systems should be able to talk to each other.
+
+# Protocol
+
+The protocol is message based.  Messages can be send on a stream or datagram
+based transport.  Each message has a maximum size of FOO octets.
+
+The following format describes every message:
+
+    size 123
+    [data with 123 octets]
+
+Every header line is delimited by a newline character.  The only whitespace
+characters are space and newline.
+
+`size` starts the data section.  Programs should format their data based on the
+same rules as the core protocol.
+
+Each node in the network runs a message router and may expose some of the
+services to the network.  Service discovery is a separate service and may be
+queried using the appropriate protocol.
+
+    from macrolet.net
+    from zsh+456
+    to straylight
+    to open
+    size 26
+    file macrolet.net:test.md
+
+The request above asks the machine at straylight to open the file on the
+machine macrolet.net in the home directory of the authenticated user.  This
+means that the user has to have an account on both systems and that pathname
+translation / mounting of the foreign filesystem is enabled to retrieve
+respectively edit the correct file.
