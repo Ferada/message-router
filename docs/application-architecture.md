@@ -36,6 +36,13 @@ own way of doing essentially the same thing.
 - Factor common functionality.
 - File system as database (even using FUSE).
 
+A protocol to connect multiple applications should be so simple that no
+FFI is necessary to interact with it and an implementation is ideally
+possible just by reading and writing from, say, a (named) pipe.
+Creation of control files etc. could then be handled by a separate
+daemon, similar to how a inetd works, or DBus, modulo the more complex
+protocol.
+
 ## Characteristics of programs
 
 1. Filter, processes some input (file) and outputs some results (sed,
